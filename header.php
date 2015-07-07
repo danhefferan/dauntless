@@ -55,6 +55,7 @@ echo ' | ' . sprintf( __( 'Page %s', 'shape' ), max( $paged, $page ) );
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
      <header id="masthead" class="site-header" role="banner">
+        <div id="hwrap">
          <hgroup>
      <h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
    
@@ -66,6 +67,7 @@ echo ' | ' . sprintf( __( 'Page %s', 'shape' ), max( $paged, $page ) );
             </a>
 <?php } // if ( ! empty( $header_image ) )
 ?>
-        
+         <?php wp_nav_menu( $args ); ?> 
+         </div>
      </header><!-- #masthead .site-header -->
 <div id="main" class="site-main">
